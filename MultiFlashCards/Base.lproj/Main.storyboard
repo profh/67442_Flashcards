@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Commands-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="RailsViewController" customModule="MultiFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rails Command:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-TL-zNt">
+                                <rect key="frame" x="27" y="115" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="8Zx-38-159"/>
+                                    <constraint firstAttribute="height" constant="21" id="opQ-mP-sXB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rails command goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEg-pe-ZDc">
+                                <rect key="frame" x="43" y="156" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="2N0-mz-ICs"/>
+                                    <constraint firstAttribute="height" constant="70" id="EfC-xy-yH3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95968274877762738" blue="0.91577789135860044" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iA4-TL-zNt" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="95" id="3rh-bk-htq"/>
+                            <constraint firstAttribute="centerX" secondItem="iA4-TL-zNt" secondAttribute="centerX" id="7fa-V6-RGa"/>
+                            <constraint firstItem="iEg-pe-ZDc" firstAttribute="top" secondItem="iA4-TL-zNt" secondAttribute="bottom" constant="20" id="9O6-3c-rbU"/>
+                            <constraint firstItem="iEg-pe-ZDc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="IXz-Dq-OMJ"/>
+                            <constraint firstAttribute="centerX" secondItem="iEg-pe-ZDc" secondAttribute="centerX" id="MeB-tI-ryT"/>
+                            <constraint firstItem="iA4-TL-zNt" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="51" id="OhV-jk-sZy"/>
+                            <constraint firstItem="iA4-TL-zNt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="11" id="P2X-1p-roR"/>
+                            <constraint firstItem="iEg-pe-ZDc" firstAttribute="top" secondItem="iA4-TL-zNt" secondAttribute="bottom" constant="20" id="QQb-92-SnK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3rh-bk-htq"/>
+                                <exclude reference="P2X-1p-roR"/>
+                                <exclude reference="IXz-Dq-OMJ"/>
+                                <exclude reference="QQb-92-SnK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Commands" id="kDk-a1-Odo">
+                        <barButtonItem key="rightBarButtonItem" title="Definition" id="ldV-AM-3mB">
+                            <connections>
+                                <segue destination="0DW-Ue-jmZ" kind="show" identifier="showDefinition" id="U1n-Zs-nYQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="commandLabel" destination="iEg-pe-ZDc" id="CkY-Tg-TON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201.5" y="-320.5"/>
+        </scene>
+        <!--Definition-->
+        <scene sceneID="TSf-cL-b8C">
+            <objects>
+                <viewController id="0DW-Ue-jmZ" customClass="DefinitionViewController" customModule="MultiFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cX8-Nt-dab"/>
+                        <viewControllerLayoutGuide type="bottom" id="jrU-6D-Tcq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWW-ZJ-FVc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term Relisted:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poj-eQ-tKI">
+                                <rect key="frame" x="43" y="92" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="It3-VS-mYu"/>
+                                    <constraint firstAttribute="width" constant="288" id="fPv-2A-l9h"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="tDX-H7-lbK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tDX-H7-lbK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term definition goes here; could be longers" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqI-Aa-bRC">
+                                <rect key="frame" x="36" y="169" width="302" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="DOE-l7-2lI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="141" id="a2w-i6-amj"/>
+                                    <constraint firstAttribute="height" constant="141" id="a7s-lc-ugX"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="141" id="aR4-pE-DXa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a2w-i6-amj"/>
+                                        <exclude reference="aR4-pE-DXa"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95968274880000004" blue="0.91577789139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mqI-Aa-bRC" secondAttribute="centerX" id="3h5-xY-85u"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="top" secondItem="poj-eQ-tKI" secondAttribute="bottom" constant="7" id="4Ru-zX-7OA"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="top" secondItem="poj-eQ-tKI" secondAttribute="bottom" constant="-5" id="Csn-V7-slq"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="top" secondItem="poj-eQ-tKI" secondAttribute="bottom" constant="-5" id="LbM-r1-14i"/>
+                            <constraint firstItem="poj-eQ-tKI" firstAttribute="top" secondItem="cX8-Nt-dab" secondAttribute="bottom" constant="72" id="b9y-i0-YCs"/>
+                            <constraint firstAttribute="centerX" secondItem="poj-eQ-tKI" secondAttribute="centerX" id="bpa-cd-1WZ"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="leading" secondItem="jWW-ZJ-FVc" secondAttribute="leadingMargin" constant="20" id="gnx-T8-XGU"/>
+                            <constraint firstItem="poj-eQ-tKI" firstAttribute="leading" secondItem="jWW-ZJ-FVc" secondAttribute="leadingMargin" constant="27" id="nH0-si-kdo"/>
+                            <constraint firstItem="poj-eQ-tKI" firstAttribute="top" secondItem="cX8-Nt-dab" secondAttribute="bottom" constant="28" id="pxM-sJ-6PV"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="leading" secondItem="poj-eQ-tKI" secondAttribute="trailing" constant="-295" id="t6G-vh-PPJ"/>
+                            <constraint firstItem="mqI-Aa-bRC" firstAttribute="top" secondItem="poj-eQ-tKI" secondAttribute="bottom" constant="-5" id="yyK-Mk-k1Z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="b9y-i0-YCs"/>
+                                <exclude reference="nH0-si-kdo"/>
+                                <exclude reference="Csn-V7-slq"/>
+                                <exclude reference="LbM-r1-14i"/>
+                                <exclude reference="gnx-T8-XGU"/>
+                                <exclude reference="t6G-vh-PPJ"/>
+                                <exclude reference="yyK-Mk-k1Z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Definition" id="XFu-v2-r3v">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="JE0-UU-Fbq">
+                            <connections>
+                                <segue destination="cAS-6C-Uer" kind="show" identifier="searchForTerm" id="YA5-G1-phZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="definitionLabel" destination="mqI-Aa-bRC" id="QJf-NK-xq0"/>
+                        <outlet property="termLabel" destination="poj-eQ-tKI" id="Y3x-i4-A2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcT-YA-Dx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5" y="32.5"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Fce-rV-8V4">
+            <objects>
+                <viewController id="cAS-6C-Uer" customClass="SearchController" customModule="MultiFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tSV-9L-IQ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="KRF-pc-B3q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3EG-iS-TrL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJq-21-x79">
+                                <rect key="frame" x="0.0" y="20" width="429" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="AIN-3s-CIa"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="vJq-21-x79" id="krH-Xn-e59"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VwY-6q-L3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190.5" y="32.5"/>
+        </scene>
+        <!--Methods-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="RubyViewController" customModule="MultiFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruby Method:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qin-7J-BU2">
+                                <rect key="frame" x="27" y="116" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1uO-Xa-wVo"/>
+                                    <constraint firstAttribute="height" constant="21" id="7tP-qR-sSC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruby instance methods goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pc5-0k-EjZ">
+                                <rect key="frame" x="43" y="157" width="298" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="EzO-EL-IhP"/>
+                                    <constraint firstAttribute="height" constant="70" id="Kfa-xu-ig4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95968274880000004" blue="0.91577789139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pc5-0k-EjZ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="27" id="31W-Sq-pIw"/>
+                            <constraint firstItem="qin-7J-BU2" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="96" id="F08-Zy-D5F"/>
+                            <constraint firstAttribute="centerX" secondItem="qin-7J-BU2" secondAttribute="centerX" id="XA3-5z-SdJ"/>
+                            <constraint firstItem="Pc5-0k-EjZ" firstAttribute="top" secondItem="qin-7J-BU2" secondAttribute="bottom" constant="20" id="bQD-iK-qtJ"/>
+                            <constraint firstItem="qin-7J-BU2" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="52" id="hhB-rn-ORP"/>
+                            <constraint firstItem="Pc5-0k-EjZ" firstAttribute="top" secondItem="qin-7J-BU2" secondAttribute="bottom" constant="20" id="o6X-mX-Lw9"/>
+                            <constraint firstAttribute="centerX" secondItem="Pc5-0k-EjZ" secondAttribute="centerX" constant="-4.5" id="pIZ-hz-ags"/>
+                            <constraint firstItem="qin-7J-BU2" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="11" id="wKa-7j-mu7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F08-Zy-D5F"/>
+                                <exclude reference="wKa-7j-mu7"/>
+                                <exclude reference="31W-Sq-pIw"/>
+                                <exclude reference="o6X-mX-Lw9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Methods" id="gEI-AD-9SN">
+                        <barButtonItem key="rightBarButtonItem" title="Definition" id="5to-fA-l0u">
+                            <connections>
+                                <segue destination="0DW-Ue-jmZ" kind="show" identifier="showDefinitionRuby" id="sVj-el-MhS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="methodLabel" destination="Pc5-0k-EjZ" id="2oS-87-D8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201.5" y="409.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.93948860448584715" green="0.9557945125536933" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QGB-ii-WOK" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="LDx-J4-aMw" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="L6W-gY-fNB" kind="relationship" relationship="viewControllers" id="Cvd-K4-hfz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.5" y="-0.5"/>
+        </scene>
+        <!--Rails-->
+        <scene sceneID="WOO-4A-WUk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QGB-ii-WOK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rails" image="rails_tab" selectedImage="rails_tab" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AMn-nP-52s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="5sU-ww-JsM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYv-Qn-Q4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Ruby-->
+        <scene sceneID="eAO-dQ-kgP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LDx-J4-aMw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ruby" image="ruby_tab" selectedImage="ruby_tab" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yf8-Uu-yNi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="5mT-33-Tqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9r-P9-hs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.5" y="409.5"/>
+        </scene>
+        <!--About Controller-->
+        <scene sceneID="Rkm-hH-BqL">
+            <objects>
+                <viewController id="L6W-gY-fNB" customClass="AboutController" customModule="MultiFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tgz-Wv-WXu"/>
+                        <viewControllerLayoutGuide type="bottom" id="cbi-Y3-LIY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zV-ls-8No">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-D0-VFl">
+                                <rect key="frame" x="51" y="62" width="273" height="311"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">This is information about this glorious app.  Truthfully we cannot tell you much without putting your life in danger from the government, which is desparately trying to steal the secrets of this amazing app.  That fact alone should tell you its awesome worth and you should be grateful that we provide it free of charge to patzers like you.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="DHi-XF-DEe"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2C-Q7-k3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.5" y="783.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rails_tab" width="30" height="30"/>
+        <image name="ruby_tab" width="24" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sVj-el-MhS"/>
+    </inferredMetricsTieBreakers>
+</document>
